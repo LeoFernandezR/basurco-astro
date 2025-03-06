@@ -1,0 +1,129 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import Users from "lucide-astro/Users";
+import Award from "lucide-astro/Award";
+import Briefcase from "lucide-astro/Briefcase";
+import Mail from "lucide-astro/Mail";
+import Phone from "lucide-astro/Phone";
+import { Button } from "@/components/ui/button";
+---
+
+<Layout title="Bazurco - RRHH">
+  {/* Page Title */}
+  <section class="bg-[#4285f4] text-white py-16">
+    <div class="container mx-auto px-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Recursos Humanos</h1>
+      <p class="text-xl max-w-3xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Únete a nuestro
+        equipo y crece profesionalmente.
+      </p>
+    </div>
+  </section>
+
+  {/* Why Join Us */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">
+          ¿Por qué trabajar con nosotros?
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 text-center">
+          <div
+            class="w-16 h-16 bg-[#4285f4] rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <Users class="h-8 w-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Ambiente Laboral</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="p-6 text-center">
+          <div
+            class="w-16 h-16 bg-[#4285f4] rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <Award class="h-8 w-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">
+            Desarrollo Profesional
+          </h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="p-6 text-center">
+          <div
+            class="w-16 h-16 bg-[#4285f4] rounded-full flex items-center justify-center mx-auto mb-4"
+          >
+            <Briefcase class="h-8 w-8 text-white" />
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Beneficios</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Contact HR */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div
+        class="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-md border border-gray-200"
+      >
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-800">Contáctanos</h2>
+          <p class="text-gray-600 mt-4">
+            ¿Interesado en unirte a nuestro equipo? Envíanos tu CV y nos
+            pondremos en contacto contigo.
+          </p>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row md:items-center md:justify-center gap-8 p-6 bg-gray-50 rounded-lg"
+        >
+          <div class="flex flex-col items-center text-center">
+            <Mail class="h-12 w-12 text-[#4285f4] mb-4" />
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+            <a
+              href="mailto:rrhh@bazurco.com"
+              class="text-[#4285f4] text-lg hover:underline"
+            >
+              rrhh@bazurco.com
+            </a>
+          </div>
+
+          <div class="hidden md:block h-20 w-px bg-gray-300"></div>
+
+          <div class="flex flex-col items-center text-center">
+            <Phone class="h-12 w-12 text-[#4285f4] mb-4" />
+            <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
+            <a href="tel:+123456789" class="text-gray-600 text-lg">
+              +123 456 789
+            </a>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <Button
+            className="bg-[#4285f4] hover:bg-[#4285f4]/90 px-8 py-3 text-lg"
+          >
+            <a href="mailto:rrhh@bazurco.com">Enviar CV</a>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,142 @@
+---
+import { Button } from "@/components/ui/button";
+import Layout from "../layouts/Layout.astro";
+import CheckCircle from "lucide-astro/CheckCircle";
+import { Image } from "astro:assets";
+import nosotros from "@/assets/nosotros.jpg";
+---
+
+<Layout title="Bazurco - Nosotros">
+  <section class="bg-[#4285f4] text-white py-16">
+    <div class="container mx-auto px-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Nosotros</h1>
+      <p class="text-xl max-w-3xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Conoce más
+        sobre nuestra empresa y nuestros valores.
+      </p>
+    </div>
+  </section>
+
+  {/* Company Introduction */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h2 class="text-3xl font-bold text-gray-800 mb-6">
+            Nuestra Historia
+          </h2>
+          <p class="text-gray-600 mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p class="text-gray-600">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+            cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum.
+          </p>
+        </div>
+        <div class="relative h-[400px] rounded-lg overflow-hidden shadow-lg">
+          <Image src={nosotros} alt="Nuestra empresa" class="object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Mission & Vision */}
+  <section class="py-16 px-12 bg-gray-100">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Misión y Visión</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div
+            class="w-16 h-16 bg-[#4285f4] rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="text-white text-2xl font-bold">M</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Misión</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <div class="bg-white p-8 rounded-lg shadow-sm">
+          <div
+            class="w-16 h-16 bg-[#4285f4] rounded-full flex items-center justify-center mb-6"
+          >
+            <span class="text-white text-2xl font-bold">V</span>
+          </div>
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Visión</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Values */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Nuestros Valores</h2>
+        <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+          eiusmod tempor incididunt ut labore.
+        </p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="p-6 border border-gray-200 rounded-lg">
+          <CheckCircle class="h-12 w-12 text-[#4285f4] mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Excelencia</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="p-6 border border-gray-200 rounded-lg">
+          <CheckCircle class="h-12 w-12 text-[#4285f4] mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Integridad</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+        <div class="p-6 border border-gray-200 rounded-lg">
+          <CheckCircle class="h-12 w-12 text-[#4285f4] mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Compromiso</h3>
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="py-16 px-12 bg-[#4285f4] text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">
+        ¿Quieres saber más sobre nosotros?
+      </h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <Button
+        className="bg-white text-[#4285f4] hover:bg-gray-100 px-8 py-3 text-lg"
+      >
+        <a href="/contacto">Contáctanos</a>
+      </Button>
+    </div>
+  </section>
+</Layout>

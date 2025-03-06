@@ -1,0 +1,190 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Mail from "lucide-astro/Mail";
+import Phone from "lucide-astro/Phone";
+import MapPin from "lucide-astro/MapPin";
+import Building from "lucide-astro/Building";
+import MessageSquare from "lucide-astro/MessageSquare";
+import User from "lucide-astro/User";
+import Clock from "lucide-astro/Clock";
+import ContactForm from "@/components/form";
+import { Button } from "@/components/ui/button";
+import { Image } from "astro:assets";
+import mapa from "@/assets/mapa.jpg";
+---
+
+<Layout title="Bazurco - Contacto">
+  {/* Page Title */}
+  <section class="bg-[#4285f4] text-white py-16">
+    <div class="container mx-auto px-12">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Contacto</h1>
+      <p class="text-xl max-w-3xl">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Estamos aquí
+        para ayudarte.
+      </p>
+    </div>
+  </section>
+
+  {/* Contact Information */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-lg shadow-sm text-center border-t-4 border-[#4285f4]"
+        >
+          <Mail class="h-12 w-12 text-[#4285f4] mx-auto mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Email</h3>
+          <a
+            href="mailto:info@bazurco.com"
+            class="text-[#4285f4] hover:underline"
+          >
+            info@bazurco.com
+          </a>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-lg shadow-sm text-center border-t-4 border-[#4285f4]"
+        >
+          <Phone class="h-12 w-12 text-[#4285f4] mx-auto mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Teléfono</h3>
+          <a href="tel:+123456789" class="text-gray-600"> +123 456 789 </a>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-lg shadow-sm text-center border-t-4 border-[#4285f4]"
+        >
+          <MapPin class="h-12 w-12 text-[#4285f4] mx-auto mb-4" />
+          <h3 class="text-xl font-bold text-gray-800 mb-2">Dirección</h3>
+          <p class="text-gray-600">
+            Calle Principal 123
+            <br />
+            Ciudad, País
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ContactForm />
+
+  {/* Office Hours */}
+  <section class="py-16 px-12">
+    <div class="container mx-auto">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800">Horario de Atención</h2>
+          <p class="text-gray-600 mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+              <Clock class="h-5 w-5 text-[#4285f4] mr-2" />
+              Horario de Oficina
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between">
+                <span class="text-gray-600">Lunes - Viernes:</span>
+                <span class="font-medium">9:00 - 18:00</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600">Sábado:</span>
+                <span class="font-medium">9:00 - 13:00</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600">Domingo:</span>
+                <span class="font-medium">Cerrado</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-sm">
+            <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+              <Phone class="h-5 w-5 text-[#4285f4] mr-2" />
+              Atención Telefónica
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex justify-between">
+                <span class="text-gray-600">Lunes - Viernes:</span>
+                <span class="font-medium">8:00 - 20:00</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600">Sábado:</span>
+                <span class="font-medium">9:00 - 15:00</span>
+              </li>
+              <li class="flex justify-between">
+                <span class="text-gray-600">Domingo:</span>
+                <span class="font-medium">Cerrado</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* Map */}
+  <section class="py-16 px-12 bg-gray-100">
+    <div class="container mx-auto flex gap-12 items-center justify-around">
+      <div class="max-w-4xl">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-800">Nuestra Ubicación</h2>
+          <p class="text-gray-600 mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <div
+          class="relative h-[400px] w-[600px] bg-gray-300 rounded-lg shadow-md"
+        >
+          {/* This would be replaced with an actual map component */}
+          <div class="absolute inset-0 flex items-center justify-center">
+            <p class="text-gray-600">Mapa de ubicación</p>
+          </div>
+        </div>
+
+        <div class="mt-6 text-center">
+          <p class="text-gray-600">Calle Principal 123, Ciudad, País</p>
+        </div>
+      </div>
+      <div class="max-w-4xl">
+        <div class="text-center mb-8">
+          <h2 class="text-3xl font-bold text-gray-800">Zonas de trabajo</h2>
+          <p class="text-gray-600 mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <div
+          class="relative h-[400px] w-full bg-gray-300 rounded-lg overflow-hidden shadow-lg"
+        >
+          {/* This would be replaced with an actual map component */}
+          <Image src={mapa} alt="Mapa de ubicación" class="object-cover" />
+        </div>
+
+        <div class="mt-6 text-center">
+          <p class="text-gray-600">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA */}
+  <section class="py-16 px-12 bg-[#4285f4] text-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">¿Listo para comenzar?</h2>
+      <p class="text-xl max-w-2xl mx-auto mb-8">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </p>
+      <Button
+        className="bg-white text-[#4285f4] hover:bg-gray-100 px-8 py-3 text-lg"
+      >
+        <a href="#contact-form">Contáctanos hoy</a>
+      </Button>
+    </div>
+  </section></Layout
+>

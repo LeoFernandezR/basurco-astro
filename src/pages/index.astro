@@ -1,11 +1,181 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import nosotros from "../assets/nosotros.jpg";
+import service1 from "../assets/service1.jpg";
+import service2 from "../assets/service2.jpg";
+import service3 from "../assets/service3.jpg";
+import { Image, getImage } from "astro:assets";
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
-<Layout>
-	<Welcome />
+<Layout title="Bazurco">
+  {/* hero */}
+  <div class="h-screen w-full bg-cover overflow-hidden bg-center bg-hero-image">
+    <div class="h-full bg-black/50 flex items-center justify-center flex-col">
+      <h1 class="text-white text-5xl font-bold text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h1>
+      <h2 class="text-white text-3xl font-light text-center">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h2>
+    </div>
+  </div>
+  {/* nosotros */}
+  <div class="bg-blue-500 text-white px-12">
+    <div class="container mx-auto py-12">
+      <div class="flex gap-16 justify-center">
+        <div
+          class="w-[550px] h-[355px] relative rounded-lg overflow-hidden shadow-lg"
+        >
+          <Image
+            src={nosotros}
+            alt="Nosotros"
+            class="w-full h-full object-cover overflow-hidden"
+          />
+        </div>
+        <div class="max-w-xl text-center">
+          <h2 class="text-3xl font-bold">Nosotros somos la mejor empresa</h2>
+          <p class="text-lg mt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            dolorum, fugit, quos, quas voluptatem quia nemo voluptatum atque
+            doloremque autem quod. Consequatur, quod. Quisquam dolorum, fugit,
+            quos, quas voluptatem quia nemo voluptatum atque doloremque autem
+            quod. Consequatur, quod.
+          </p>
+          <p class="text-lg mt-4 text-justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            dolorum, fugit, quos, quas voluptatem quia nemo voluptatum atque
+            doloremque autem quod. Consequatur, quod. Quisquam dolorum, fugit,
+            quos, quas voluptatem quia nemo voluptatum atque doloremque autem
+            quod. Consequatur, quod.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  {/* servicios minimo */}
+  <div class="px-12 py-8">
+    <div class="flex gap-4 justify-center items-center w-full">
+      <div class="px-4 py-8">
+        <h2 class="text-3xl font-bold text-blue-500">Nuestros servicios</h2>
+        <p class="text-lg mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          dolorum, fugit, quos, quas voluptatem quia nemo voluptatum atque
+          doloremque autem quod. Consequatur, quod. Quisquam dolorum, fugit,
+          quos, quas voluptatem quia nemo voluptatum atque doloremque autem
+          quod. Consequatur, quod.
+        </p>
+      </div>
+      <div class="px-4 py-8">
+        <h2 class="text-3xl font-bold text-blue-500">Nuestros servicios</h2>
+        <p class="text-lg mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          dolorum, fugit, quos, quas voluptatem quia nemo voluptatum atque
+          doloremque autem quod. Consequatur, quod. Quisquam dolorum, fugit,
+          quos, quas voluptatem quia nemo voluptatum atque doloremque autem
+          quod. Consequatur, quod.
+        </p>
+      </div>
+      <div class="px-4 py-8">
+        <h2 class="text-3xl font-bold text-blue-500">Nuestros servicios</h2>
+        <p class="text-lg mt-4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          dolorum, fugit, quos, quas voluptatem quia nemo voluptatum atque
+          doloremque autem quod. Consequatur, quod. Quisquam dolorum, fugit,
+          quos, quas voluptatem quia nemo voluptatum atque doloremque autem
+          quod. Consequatur, quod.
+        </p>
+      </div>
+    </div>
+  </div>
+  {/* separador */}
+  <div class="bg-blue-500 text-white py-8">
+    <div class="container mx-auto">
+      <h2 class="text-3xl font-bold text-center">
+        Más acerca de nuestros servicios
+      </h2>
+    </div>
+  </div>
+  {/* servicios explained */}
+  <div class="px-12 pt-8 pb-12">
+    <div class="flex justify-around items-center gap-4">
+      <div class="flex flex-col gap-2">
+        <h3 class="text-2xl font-bold text-blue-500 mt-4 text-center">
+          Servicio 1
+        </h3>
+        <div class="w-[500px] h-[300px] rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={service1}
+            alt="Service 1"
+            class="w-full h-full object-cover overflow-hidden object-bottom"
+          />
+        </div>
+        <div class="flex items-center flex-col flex-1 max-w-[500px]">
+          <p class="text-lg mt-2 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit non,
+            odit corrupti nesciunt tenetur cum aliquam, quis, dolore sapiente
+            veritatis aut animi. At, nostrum corporis. Facilis error at ratione
+            ab. Ducimus voluptate excepturi necessitatibus laboriosam alias
+            minima aspernatur iste quisquam aliquid vero natus, nemo dolore?
+            Earum, laboriosam doloribus aliquid cumque quae quis expedita
+            aspernatur harum ducimus a ut distinctio in?
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="text-2xl font-bold text-blue-500 mt-4 text-center">
+          Servicio 2
+        </h3>
+        <div class="w-[500px] h-[300px] rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={service2}
+            alt="Service 2"
+            class="w-full h-full object-cover overflow-hidden object-bottom"
+          />
+        </div>
+        <div class="flex items-center flex-col flex-1 max-w-[500px]">
+          <p class="text-lg mt-2 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit non,
+            odit corrupti nesciunt tenetur cum aliquam, quis, dolore sapiente
+            veritatis aut animi. At, nostrum corporis. Facilis error at ratione
+            ab. Ducimus voluptate excepturi necessitatibus laboriosam alias
+            minima aspernatur iste quisquam aliquid vero natus, nemo dolore?
+            Earum, laboriosam doloribus aliquid cumque quae quis expedita
+            aspernatur harum ducimus a ut distinctio in?
+          </p>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2">
+        <h3 class="text-2xl font-bold text-blue-500 mt-4 text-center">
+          Servicio 3
+        </h3>
+        <div class="w-[500px] h-[300px] rounded-lg overflow-hidden shadow-lg">
+          <Image
+            src={service3}
+            alt="Service 3"
+            class="w-full h-full object-cover overflow-hidden object-bottom"
+          />
+        </div>
+        <div class="flex items-center flex-col flex-1 max-w-[500px]">
+          <p class="text-lg mt-2 text-center">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit non,
+            odit corrupti nesciunt tenetur cum aliquam, quis, dolore sapiente
+            veritatis aut animi. At, nostrum corporis. Facilis error at ratione
+            ab. Ducimus voluptate excepturi necessitatibus laboriosam alias
+            minima aspernatur iste quisquam aliquid vero natus, nemo dolore?
+            Earum, laboriosam doloribus aliquid cumque quae quis expedita
+            aspernatur harum ducimus a ut distinctio in?
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .bg-hero-image {
+    background-image: url("../assets/hero.jpg");
+  }
+</style>
